@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'FinkHeavy';
+    src: url('/fonts/FinkHeavy.woff2') format('woff2'), url('/fonts/FinkHeavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'FinkHeavy', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-content: center;
+    grid-template-areas: 'hd' 'hd' 'main' 'sd' 'ft';
+    border: 1px solid turquoise;
+}
+
+.item {
+    display: grid;
+}
+
+.header {
+    grid-area: hd;
+    border: 1px solid red;
+}
+
+.main {
+    grid-area: main;
+    border: 1px solid blue;
+}
+
+.sidebar {
+    grid-area: sd;
+    border: 1px solid green;
+}
+
+.footer {
+    grid-area: ft;
+    border: 1px solid orange;
+}
+
+@media(min-width:1040px) {
+    .container {
+        grid-template-columns: 350px 350px 300px;
+        grid-template-areas: 'hd hd hd' 'hd hd hd' 'main main sd' 'ft ft ft';
+    }
+}
