@@ -1,0 +1,132 @@
+/* CSS Variables */
+
+:root {
+    --primary: #fffffa;
+    --ac-blue: #9edcdb;
+    --ac-green: #89caa2;
+    --ac-brown: #c48d3f;
+    --ac-orange: #fde295;
+    --ac-purple: #c4a0dd;
+    --ac-yellow: #f1e06a;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    background: var(--primary);
+}
+
+.btn {
+    background: var(--ac-blue);
+    color: var(--primary);
+    padding: 0, 6rem 1.3rem;
+    text-decoration: none;
+    border: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: max-content max-content auto max-content;
+    column-gap: 10px;
+    row-gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+    grid-template-areas: 'nav' 'hd' 'ct' 'ft';
+    border: 1px solid turquoise;
+}
+
+.box-top, .box-bottom {
+    background-color: var(--ac-blue);
+    color: var(--primary);
+}
+
+/* Navigation */
+
+.nav-bar ul {
+    grid-area: nav;
+    display: grid;
+    column-gap: 20px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(6, auto);
+    font-family: 'Coustard', sans-serif;
+    font-size: 20px;
+}
+
+.nav-bar a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.nav-bar a:hover {
+    color: var(--ac-orange);
+}
+
+.social {
+    display: block;
+    text-align: right;
+}
+
+.social a {
+    padding: 2px;
+}
+
+.fa-facebook:hover {
+    color: #3B5998;
+}
+
+.fa-twitter:hover {
+    color: #1da1f2;
+}
+
+.fa-instagram:hover {
+    color: transparent;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+}
+
+.fa-pinterest:hover {
+    color: #e60023;
+}
+
+/* Header*/
+
+.header {
+    grid-area: hd;
+    font-family: 'Coustard', sans-serif;
+    font-size: 32px;
+    color: var(--ac-blue);
+    border: 1px solid pink;
+    background-image: url(/resources/img/forest.jpg);
+}
+
+.content {
+    grid-area: ct;
+}
+
+.main {
+    grid-area: main;
+    flex-direction: column;
+    border: 1px solid blue;
+}
+
+.sidebar {
+    grid-area: sd;
+    border: 1px solid green;
+}
+
+.footer {
+    grid-area: ft;
+}
+
+@media(min-width:835px) {
+    .container {
+        grid-template-columns: repeat(3, auto);
+        grid-template-areas: 'nav nav nav' 'hd hd hd' 'ct' 'ft ft ft';
+    }
+}
