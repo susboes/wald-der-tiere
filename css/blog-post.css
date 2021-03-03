@@ -1,0 +1,38 @@
+@import 'gallery.css';
+
+.post-content p {
+    text-align: justify;
+    line-height: 24px;
+}
+
+blockquote {
+    color: gray;
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 10px;
+    max-width: 300px;
+    margin: 20px auto;
+    font-style: italic;
+}
+
+blockquote .quote-autor {
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    margin: 0px 5px;
+}
+
+.post-header {
+    text-align: center;
+}
+
+.post-date, .autor {
+    font-size: 14px;
+    color: gray;
+}
+
+@media(max-width:800px) {
+    .gallery {
+        grid-template-columns: 100%;
+    }
+}

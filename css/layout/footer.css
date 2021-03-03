@@ -1,0 +1,31 @@
+.footer {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.footer p {
+    padding: 10px;
+}
+
+.footer a {
+    font-weight: bold;
+    color: white;
+}
+
+/* Link to top */
+
+.to-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    max-width: 50%;
+    width: 150px;
+    padding: 0;
+}
+
+.to-top img {
+    float: right;
+}
